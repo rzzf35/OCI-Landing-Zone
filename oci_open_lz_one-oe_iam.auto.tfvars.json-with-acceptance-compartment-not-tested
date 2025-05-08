@@ -1,0 +1,1642 @@
+{
+    "compartments_configuration": {
+        "enable_delete": "true",
+        "compartments": {
+            "CMP-LANDINGZONE-P-KEY": {
+                "name": "cmp-landingzone-01",
+                "description": "Enclosing Production Landing Zone Compartment",
+                "children": {
+                    "CMP-LZP-NETWORK-KEY": {
+                        "name": "cmp-lz01-network",
+                        "description": "Shared Network Compartment"
+                    },
+                    "CMP-LZP-SECURITY-KEY": {
+                        "name": "cmp-lz01-security",
+                        "description": "Shared Security Compartment"
+                    },
+                    "CMP-LZP-PLATFORM-KEY": {
+                        "name": "cmp-lz01-platform",
+                        "description": "Shared Platform Compartment",
+                        "children": {
+                            "CMP-LZP-PLATFORM-EXACS-KEY": {
+                                "name": "cmp-lz01-platform-exacs",
+                                "description": "ExaCS Shared Platform",
+                                "children": {
+                                    "CMP-LZP-PLATFORM-EXACS-DB-KEY": {
+                                        "name": "cmp-lz01-platform-exacs-db",
+                                        "description": "ExaCS Shared Platform, DB Layer"
+                                    },
+                                    "CMP-LZP-PLATFORM-EXACS-INFRA-KEY": {
+                                        "name": "cmp-lz01-platform-exadbd-infra",
+                                        "description": "ExaCS Shared Platform, Infra Layer"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "CMP-LZP-PROD-KEY": {
+                        "name": "cmp-lz01-prd",
+                        "description": "Prod Environment Compartment",
+
+                        "children": {
+                            "CMP-LZP-P-NETWORK-KEY": {
+                                "name": "cmp-lz01-prd-network",
+                                "description": "Prod Workload Environment, Common Network Compartment"                      
+                            },
+                            "CMP-LZP-P-SECURITY-KEY": {
+                                "name": "cmp-lz01-prd-security",
+                                "description": "Prod Workload Environment, Common Security Compartment"                   
+                            },
+                            "CMP-LZP-P-PLATFORM-KEY": {
+                                "name": "cmp-lz01-prd-platform",
+                                "description": "Prod Workload Environment, Common Platform Compartment",
+                                "children": {
+                                    "CMP-LZP-P-PLATFORM-EXACS-KEY": {
+                                        "name": "cmp-lz01-prd-platform-exadbd",
+                                        "description": "ExaCS Platform, Production Environment",
+                                        "children": {
+                                            "CMP-LZP-P-PLATFORM-EXACS-DB-KEY": {
+                                                "name": "cmp-lz01-prd-platform-exadbd-db",
+                                                "description": "ExaCS Platform, Production Environment, DB Layer"
+                                            },
+                                            "CMP-LZP-P-PLATFORM-EXACS-INFRA-KEY": {
+                                                "name": "cmp-lz01-prd-platform-exadbd-infra",
+                                                "description": "ExaCS Platform, Production Environment, Infra Layer"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "CMP-LZP-P-PROJECTS-KEY": {
+                                "name": "cmp-lz01-prd-projects",
+                                "description": "One-OE Prod Workload Environment, Common Projects Compartment",
+                                "children": {
+                                    "CMP-LZP-P-PROJ1-KEY": {
+                                        "name": "cmp-lz01-prd-proj1",
+                                        "description": "Production environment, Project 1 compartment",
+                                        "children": {
+                                            "CMP-LZP-P-PROJ1-APP-KEY": {
+                                                "name": "cmp-lz01-prd-proj1-app",
+                                                "description": "Production environment, Project 1, Application layer"
+                                            },
+                                            "CMP-LZP-P-PROJ1-DB-KEY": {
+                                                "name": "cmp-lz01-prd-proj1-db",
+                                                "description": "Production environment, Project 1, DB layer"
+                                            },
+                                            "CMP-LZP-P-PROJ1-INFRA-KEY": {
+                                                "name": "cmp-lz01-prd-proj1-infra",
+                                                "description": "Production environment, Project 1, Infra layer"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "CMP-LZP-DEV-KEY": {
+                        "name": "cmp-lz01-dev",
+                        "description": "Development Environment Compartment",
+                        "children": {
+                            "CMP-LZP-DEV-NETWORK-KEY": {
+                                "name": "cmp-lz01-dev-network",
+                                "description": "Development Workload Environment, Common Network Compartment"                      
+                            },
+                            "CMP-LZP-DEV-SECURITY-KEY": {
+                                "name": "cmp-lz01-dev-security",
+                                "description": "Development Workload Environment, Common Security Compartment"                   
+                            },
+                            "CMP-LZP-DEV-PLATFORM-KEY": {
+                                "name": "cmp-lz01-dev-platform",
+                                "description": "Development Workload Environment, Common Platform Compartment",
+                                "children": {
+                                    "CMP-LZP-DEV-PLATFORM-EXACS-KEY": {
+                                        "name": "cmp-lz01-dev-platform-exadbd",
+                                        "description": "ExaCS Platform, Production Environment",
+                                        "children": {
+                                            "CMP-LZP-DEV-PLATFORM-EXACS-DB-KEY": {
+                                                "name": "cmp-lz01-dev-platform-exadbd-db",
+                                                "description": "ExaCS Platform, Production Environment, DB Layer"
+                                            },
+                                            "CMP-LZP-DEV-PLATFORM-EXACS-INFRA-KEY": {
+                                                "name": "cmp-lz01-dev-platform-exadbd-infra",
+                                                "description": "ExaCS Platform, Production Environment, Infra Layer"
+                                            }
+                                        }
+                                    }
+                                }								
+                            },
+                            "CMP-LZP-DEV-PROJECTS-KEY": {
+                                "name": "cmp-lz01-dev-projects",
+                                "description": "One-OE Development Workload Environment, Common Projects Compartment",
+                                "children": {
+                                    "CMP-LZP-DEV-PROJ1-KEY": {
+                                        "name": "cmp-lz01-dev-proj1",
+                                        "description": "Development environment, Project 1 compartment",
+                                        "children": {
+                                            "CMP-LZP-DEV-PROJ1-APP-KEY": {
+                                                "name": "cmp-lz01-dev-proj1-app",
+                                                "description": "Development environment, Project 1, Application layer"
+                                            },
+                                            "CMP-LZP-DEV-PROJ1-DB-KEY": {
+                                                "name": "cmp-lz01-dev-proj1-db",
+                                                "description": "Development environment, Project 1, DB layer"
+                                            },
+                                            "CMP-LZP-DEV-PROJ1-INFRA-KEY": {
+                                                "name": "cmp-lz01-dev-proj1-infra",
+                                                "description": "Development environment, Project 1, Infra layer"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "CMP-LZP-ACC-KEY": {
+                        "name": "cmp-lz01-acc",
+                        "description": "Acceptance Environment Compartment",
+                        "children": {
+                            "CMP-LZP-ACC-NETWORK-KEY": {
+                                "name": "cmp-lz01-acc-network",
+                                "description": "Acceptance Workload Environment, Common Network Compartment"                      
+                            },
+                            "CMP-LZP-ACC-SECURITY-KEY": {
+                                "name": "cmp-lz01-acc-security",
+                                "description": "Acceptance Workload Environment, Common Security Compartment"                   
+                            },
+                            "CMP-LZP-ACC-PLATFORM-KEY": {
+                                "name": "cmp-lz01-acc-platform",
+                                "description": "Acceptance Workload Environment, Common Platform Compartment",
+                                "children": {
+                                    "CMP-LZP-ACC-PLATFORM-EXACS-KEY": {
+                                        "name": "cmp-lz01-acc-platform-exadbd",
+                                        "description": "ExaCS Platform, Acceptance Environment",
+                                        "children": {
+                                            "CMP-LZP-ACC-PLATFORM-EXACS-DB-KEY": {
+                                                "name": "cmp-lz01-acc-platform-exadbd-db",
+                                                "description": "ExaCS Platform, Acceptance Environment, DB Layer"
+                                            },
+                                            "CMP-LZP-ACC-PLATFORM-EXACS-INFRA-KEY": {
+                                                "name": "cmp-lz01-acc-platform-exadbd-infra",
+                                                "description": "ExaCS Platform, Acceptance Environment, Infra Layer"
+                                            }
+                                        }
+                                    }
+                                }								
+                            },
+                            "CMP-LZP-ACC-PROJECTS-KEY": {
+                                "name": "cmp-lz01-acc-projects",
+                                "description": "One-OE Development Workload Environment, Common Projects Compartment",
+                                "children": {
+                                    "CMP-LZP-ACC-PROJ1-KEY": {
+                                        "name": "cmp-lz01-acc-proj1",
+                                        "description": "Development environment, Project 1 compartment",
+                                        "children": {
+                                            "CMP-LZP-ACC-PROJ1-APP-KEY": {
+                                                "name": "cmp-lz01-acc-proj1-app",
+                                                "description": "Development environment, Project 1, Application layer"
+                                            },
+                                            "CMP-LZP-ACC-PROJ1-DB-KEY": {
+                                                "name": "cmp-lz01-acc-proj1-db",
+                                                "description": "Development environment, Project 1, DB layer"
+                                            },
+                                            "CMP-LZP-ACC-PROJ1-INFRA-KEY": {
+                                                "name": "cmp-lz01-acc-proj1-infra",
+                                                "description": "Development environment, Project 1, Infra layer"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "CMP-LZP-TEST-KEY": {
+                        "name": "cmp-lz01-tst",
+                        "description": "Test Environment Compartment",
+                        "children": {
+                            "CMP-LZP-TEST-NETWORK-KEY": {
+                                "name": "cmp-lz01-tst-network",
+                                "description": "Test Workload Environment, Common Network Compartment"                      
+                            },
+                            "CMP-LZP-TEST-SECURITY-KEY": {
+                                "name": "cmp-lz01-tst-security",
+                                "description": "Test Workload Environment, Common Security Compartment"                   
+                            },
+                            "CMP-LZP-TEST-PLATFORM-KEY": {
+                                "name": "cmp-lz01-tst-platform",
+                                "description": "Development Workload Environment, Common Platform Compartment",
+                                "children": {
+                                    "CMP-LZP-TEST-PLATFORM-EXACS-KEY": {
+                                        "name": "cmp-lz01-tst-platform-exadbd",
+                                        "description": "ExaCS Platform, Production Environment",
+                                        "children": {
+                                            "CMP-LZP-TEST-PLATFORM-EXACS-DB-KEY": {
+                                                "name": "cmp-lz01-tst-platform-exadbd-db",
+                                                "description": "ExaCS Platform, Production Environment, DB Layer"
+                                            },
+                                            "CMP-LZP-TEST-PLATFORM-EXACS-INFRA-KEY": {
+                                                "name": "cmp-lz01-tst-platform-exadbd-infra",
+                                                "description": "ExaCS Platform, Production Environment, Infra Layer"
+                                            }
+                                        }
+                                    }
+                                }								
+                            },
+                            "CMP-LZP-TEST-PROJECTS-KEY": {
+                                "name": "cmp-lz01-tst-projects",
+                                "description": "One-OE Development Workload Environment, Common Projects Compartment",
+                                "children": {
+                                    "CMP-LZP-TEST-PROJ1-KEY": {
+                                        "name": "cmp-lz01-tst-proj1",
+                                        "description": "Test environment, Project 1 compartment",
+                                        "children": {
+                                            "CMP-LZP-TEST-PROJ1-APP-KEY": {
+                                                "name": "cmp-lz01-tst-proj1-app",
+                                                "description": "Test environment, Project 1, Application layer"
+                                            },
+                                            "CMP-LZP-TEST-PROJ1-DB-KEY": {
+                                                "name": "cmp-lz01-tst-proj1-db",
+                                                "description": "Test environment, Project 1, DB layer"
+                                            },
+                                            "CMP-LZP-TEST-PROJ1-INFRA-KEY": {
+                                                "name": "cmp-lz01-tst-proj1-infra",
+                                                "description": "Test environment, Project 1, Infra layer"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "groups_configuration": {
+        "groups": {
+            "GRP-IAM-ADMINS": {
+                "name": "grp-iam-admins",  
+                "description": "Tenancy global Identity and access management administrator group."
+            },
+            "GRP-CREDENTIAL-ADMINS": { 
+                "name": "grp-credential-admins",  
+                "description": "Tenancy global credential administrator group."
+            },
+            "GRP-ANNOUNCEMENT-READERS": { 
+                "name": "grp-announcement-readers",  
+                "description": "Tenancy global readers of OCI monitoring information group."
+            },
+            "GRP-COST-ADMINS": { 
+                "name": "grp-cost-admins",  
+                "description": "Tenancy global cost control group."
+            }, 
+            "GRP-AUDITORS": { 
+                "name": "grp-auditors",  
+                "description": "Tenancy global read access group(for security auditing or health checks)."
+            }, 
+            "GRP-SECURITY-ADMINS": { 
+                "name": "grp-security-admins",  
+                "description": "Tenancy Security Administrators for global resources as Cloud Guard."
+            },
+            "GRP-LZP-IAM-ADMINS": {
+                "name": "grp-lz01-iam-admins",  
+                "description": "Production Landing Zone Environment Identity and access management administrator group."
+            },
+            "GRP-LZP-NETWORK-ADMINS": { 
+                "name": "grp-lz01-network-admins",  
+                "description": "Production Landing Zone Environment shared network administration group, including common OE network elements."
+            }, 
+            "GRP-LZP-SECURITY-ADMINS": { 
+                "name": "grp-lz01-security-admins",  
+                "description": "Production Landing Zone Environment shared security administration group, including common OE network elements."
+            },
+            "GRP-LZP-PLATFORM-ADMINS": { 
+                "name": "grp-lz01-platform-admins",  
+                "description": "Production Landing Zone Environment shared platform administration group, including common OE network elements."
+            },
+            "GRP-LZP-PROD-IAM-ADMINS": { 
+                "name": "grp-lz01-prod-iam-admins",  
+                "description": "Production Landing Zone Environment Production environment IAM administrator."
+            },
+            "GRP-LZP-PROD-NETWORK-ADMINS": { 
+                "name": "grp-lz01-prod-network-admins",  
+                "description": "Production Landing Zone Environment, Production environment, network administration group."
+            }, 
+            "GRP-LZP-PROD-SECURITY-ADMINS": { 
+                "name": "grp-lz01-prod-security-admins",  
+                "description": "Production Landing Zone Environment, Production environment, security administration group."
+            },
+            "GRP-LZP-DEV-IAM-ADMINS": { 
+                "name": "grp-lz01-dev-iam-admins",  
+                "description": "Production Landing Zone Environment Pre-production environment IAM administrator."
+            },
+            "GRP-LZP-DEV-NETWORK-ADMINS": { 
+                "name": "grp-lz01-dev-network-admins",  
+                "description": "Production Landing Zone Environment, Pre-production environment, network administration group."
+            }, 
+            "GRP-LZP-DEV-SECURITY-ADMINS": { 
+                "name": "grp-lz01-dev-security-admins",  
+                "description": "Production Landing Zone Environment, Pre-production environment, security administration group."
+            },
+            "GRP-LZP-INFRA-ADMINS": { 
+                "name": "grp-lz01-infra-admins",  
+                "description": "Global Infra Team admin group"
+            },
+            "GRP-LZP-DB-ADMINS": { 
+                "name": "grp-lz01-db-admins",  
+                "description": "Global DBA Team admin group"
+            },
+            "GRP-LZP-PROD-PROJ1-APP-ADMINS": { 
+                "name": "grp-lz01-prod-proj1-app-admins",  
+                "description": "Production Landing Zone Environment, Production environment, Project 1, Application Administrators."
+            },
+            "GRP-LZP-PROD-PROJ1-DB-ADMINS": { 
+                "name": "grp-lz01-prod-proj1-db-admins",  
+                "description": "Production Landing Zone Environment, Production environment, Project 1, Database Administrators."
+            },
+            "GRP-LZP-PROD-PROJ1-INFRA-ADMINS": { 
+                "name": "grp-lz01-prod-proj1-infra-admins",  
+                "description": "Production Landing Zone Environment, Production environment, Project 1, Infra Administrators."
+            },
+            "GRP-LZP-DEV-PROJ1-APP-ADMINS": { 
+                "name": "grp-lz01-dev-proj1-app-admins",  
+                "description": "Production Landing Zone Environment, Pre-production environment, Project 1, Application Administrators."
+            },
+            "GRP-LZP-DEV-PROJ1-DB-ADMINS": { 
+                "name": "grp-lz01-dev-proj1-db-admins",  
+                "description": "Production Landing Zone Environment, Pre-production environment, Project 1, Database Administrators."
+            },
+            "GRP-LZP-DEV-PROJ1-INFRA-ADMINS": { 
+                "name": "grp-lz01-dev-proj1-infra-admins",  
+                "description": "Production Landing Zone Environment, Pre-production environment, Project 1, Infra Administrators."
+            },
+            "GRP-LZP-TEST-IAM-ADMINS": { 
+                "name": "grp-lz01-test-iam-admins",  
+                "description": "Production Landing Zone Environment Production environment IAM administrator."
+            },
+            "GRP-LZP-TEST-NETWORK-ADMINS": { 
+                "name": "grp-lz01-test-network-admins",  
+                "description": "Production Landing Zone Environment, Production environment, network administration group."
+            }, 
+            "GRP-LZP-TEST-SECURITY-ADMINS": { 
+                "name": "grp-lz01-test-security-admins",  
+                "description": "Production Landing Zone Environment, Production environment, security administration group."
+            },
+			"GRP-LZP-TEST-PROJ1-APP-ADMINS": { 
+                "name": "grp-lz01-test-proj1-app-admins",  
+                "description": "Production Landing Zone Environment, Production environment, Project 1, Application Administrators."
+            },
+            "GRP-LZP-TEST-PROJ1-DB-ADMINS": { 
+                "name": "grp-lz01-test-proj1-db-admins",  
+                "description": "Production Landing Zone Environment, Production environment, Project 1, Database Administrators."
+            },
+            "GRP-LZP-TEST-PROJ1-INFRA-ADMINS": { 
+                "name": "grp-lz01-test-proj1-infra-admins",  
+                "description": "Production Landing Zone Environment, Production environment, Project 1, Infra Administrators."
+            },	
+            "GRP-LZP-ACC-IAM-ADMINS": { 
+                "name": "grp-lz01-acc-iam-admins",  
+                "description": "Production Landing Zone Environment Production environment IAM administrator."
+            },
+            "GRP-LZP-ACC-NETWORK-ADMINS": { 
+                "name": "grp-lz01-acc-network-admins",  
+                "description": "Production Landing Zone Environment, Production environment, network administration group."
+            }, 
+            "GRP-LZP-ACC-SECURITY-ADMINS": { 
+                "name": "grp-lz01-acc-security-admins",  
+                "description": "Production Landing Zone Environment, Production environment, security administration group."
+            },
+			"GRP-LZP-ACC-PROJ1-APP-ADMINS": { 
+                "name": "grp-lz01-acc-proj1-app-admins",  
+                "description": "Production Landing Zone Environment, Production environment, Project 1, Application Administrators."
+            },
+            "GRP-LZP-ACC-PROJ1-DB-ADMINS": { 
+                "name": "grp-lz01-acc-proj1-db-admins",  
+                "description": "Production Landing Zone Environment, Production environment, Project 1, Database Administrators."
+            },
+            "GRP-LZP-ACC-PROJ1-INFRA-ADMINS": { 
+                "name": "grp-lz01-acc-proj1-infra-admins",  
+                "description": "Production Landing Zone Environment, Production environment, Project 1, Infra Administrators."
+            }			
+				
+        }
+    },
+    "policies_configuration": {
+        "enable_cis_benchmark_checks": "false",
+        "supplied_policies": {
+            "PCY-SERVICES": {
+                "name": "pcy-services",
+                "description": "POL.00 Open LZ policy for all supported resources in the tenancy.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow service cloudguard to manage cloudevents-rules in tenancy where target.rule.type='managed'",
+                    "allow service cloudguard to read tenancies in tenancy",
+                    "allow service cloudguard to read all-resources in tenancy",
+                    "allow service cloudguard to use network-security-groups in tenancy",
+                    "allow any-user to { WLP_BOM_READ } in tenancy where all { request.principal.id = target.agent.id, request.principal.type = 'workloadprotectionagent'}",
+                    "allow any-user to { WLP_CONFIG_READ } in tenancy where all { request.principal.id = target.agent.id, request.principal.type = 'workloadprotectionagent'}",
+                    "endorse any-user to { WLP_LOG_CREATE } in any-tenancy where all { request.principal.id = target.agent.id, request.principal.type = 'workloadprotectionagent' }",
+                    "endorse any-user to { WLP_METRICS_CREATE } in any-tenancy where all { request.principal.id = target.agent.id, request.principal.type = 'workloadprotectionagent' }",
+                    "endorse any-user to { WLP_ADHOC_QUERY_READ } in any-tenancy where all { request.principal.id = target.agent.id, request.principal.type = 'workloadprotectionagent' }",
+                    "endorse any-user to { WLP_ADHOC_RESULTS_CREATE } in any-tenancy where all { request.principal.id = target.agent.id, request.principal.type = 'workloadprotectionagent'}",
+                    "allow service vulnerability-scanning-service to manage instances in tenancy",
+                    "allow service vulnerability-scanning-service to read compartments in tenancy",
+                    "allow service vulnerability-scanning-service to read repos in tenancy",
+                    "allow service vulnerability-scanning-service to read vnics in tenancy",
+                    "allow service vulnerability-scanning-service to read vnic-attachments in tenancy",
+                    "allow service osms to read instances in tenancy",
+                    "allow service blockstorage, oke, streaming, Fssoc1Prod, objectstorage-eu-frankfurt-1 to use keys in tenancy"
+                ]
+            },
+            "PCY-IAM-ADMINISTRATION": {
+                "name": "pcy-iam-administration",
+                "description": "Policy to allow grp-iam-admins group users to manage IAM resoures in the tenancy.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-iam-admins to inspect users in tenancy",
+                    "allow group grp-iam-admins to manage users in tenancy where all {request.operation != 'ListApiKeys',request.operation != 'ListAuthTokens',request.operation != 'ListCustomerSecretKeys',request.operation != 'UploadApiKey',request.operation != 'DeleteApiKey',request.operation != 'UpdateAuthToken',request.operation != 'CreateAuthToken',request.operation != 'DeleteAuthToken',request.operation != 'CreateSecretKey',request.operation != 'UpdateCustomerSecretKey',request.operation != 'DeleteCustomerSecretKey'}",
+                    "allow group grp-iam-admins to inspect groups in tenancy",
+                    "allow group grp-iam-admins to manage policies in tenancy",
+                    "allow group grp-iam-admins to manage groups in tenancy where all {target.group.name != 'Administrators',target.group.name != 'grp-credential-admins'}",
+                    "allow group grp-iam-admins to inspect identity-providers in tenancy",
+                    "allow group grp-iam-admins to manage identity-providers in tenancy where any {request.operation = 'AddIdpGroupMapping', request.operation = 'DeleteIdpGroupMapping'}",
+                    "allow group grp-iam-admins to manage dynamic-groups in tenancy",
+                    "allow group grp-iam-admins to manage authentication-policies in tenancy",
+                    "allow group grp-iam-admins to manage network-sources in tenancy",
+                    "allow group grp-iam-admins to manage quota in tenancy",
+                    "allow group grp-iam-admins to use cloud-shell in tenancy",
+                    "allow group grp-iam-admins to manage tag-defaults in tenancy",
+                    "allow group grp-iam-admins to manage tag-namespaces in tenancy",
+                    "allow group grp-iam-admins to manage orm-jobs in tenancy",
+                    "allow group grp-iam-admins to manage orm-config-source-providers in tenancy"
+                ]
+            },
+            "PCY-CREDENTIAL-ADMINISTRATION": {
+                "name": "pcy-credential-administration",
+                "description": "Policy which allows grp-credential-admins group users to manage user credentials of local users in the tenancy.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-credential-admins to inspect users in tenancy",
+                    "allow group grp-credential-admins to inspect groups in tenancy",
+                    "allow group grp-credential-admins to manage users in tenancy where any {request.operation = 'ListApiKeys',request.operation = 'ListAuthTokens',request.operation = 'ListCustomerSecretKeys',request.operation = 'UploadApiKey',request.operation = 'DeleteApiKey',request.operation = 'UpdateAuthToken',request.operation = 'CreateAuthToken',request.operation = 'DeleteAuthToken',request.operation = 'CreateSecretKey',request.operation = 'UpdateCustomerSecretKey',request.operation = 'DeleteCustomerSecretKey',request.operation = 'UpdateUserCapabilities'}",
+                    "allow group grp-credential-admins to use cloud-shell in tenancy"
+                ]
+            },
+            "PCY-ANNOUNCEMENT-READERS": {
+                "name": "pcy-announcement-readers",
+                "description": "Policy which allows grp-announcement-readers group users to read OCI announcements in the tenancy.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-announcement-readers to read announcements in tenancy",
+                    "allow group grp-announcement-readers to use cloud-shell in tenancy"
+                ]
+            },
+            "PCY-COST-ADMINISTRATION": {
+                "name": "pcy-cost-administration",
+                "description": "Policy which allows grp-cost-admins group users to manage all budget resources in the tenancy.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "define tenancy usage-report as ocid1.tenancy.oc1..aaaaaaaaned4fkpkisbwjlr56u7cj63lf3wffbilvqknstgtvzub7vhqkggq",
+                    "endorse group grp-cost-admins to read objects in tenancy usage-report",
+                    "allow group grp-cost-admins to manage usage-report in tenancy",
+                    "allow group grp-cost-admins to manage usage-budgets in tenancy"
+                ]
+            },
+            "PCY-AUDITING": {
+                "name": "pcy-auditing",
+                "description": "Policy which allows grp-auditors group users to read all the resources in the tenancy.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-auditors to inspect all-resources in tenancy",
+                    "allow group grp-auditors to read instances in tenancy",
+                    "allow group grp-auditors to read load-balancers in tenancy",
+                    "allow group grp-auditors to read buckets in tenancy",
+                    "allow group grp-auditors to read nat-gateways in tenancy",
+                    "allow group grp-auditors to read public-ips in tenancy",
+                    "allow group grp-auditors to read file-family in tenancy",
+                    "allow group grp-auditors to read instance-configurations in tenancy",
+                    "allow group grp-auditors to read network-security-groups in tenancy",
+                    "allow group grp-auditors to read resource-availability in tenancy",
+                    "allow group grp-auditors to read audit-events in tenancy",
+                    "allow group grp-auditors to read users in tenancy",
+                    "allow group grp-auditors to use cloud-shell in tenancy",
+                    "allow group grp-auditors to read vss-family in tenancy",
+                    "allow group grp-auditors to read usage-budgets in tenancy",
+                    "allow group grp-auditors to read usage-reports in tenancy",
+                    "allow group grp-auditors to read data-safe-family in tenancy",
+                    "allow group grp-auditors to read vaults in tenancy",
+                    "allow group grp-auditors to read keys in tenancy",
+                    "allow group grp-auditors to read tag-namespaces in tenancy",
+                    "allow group grp-auditors to read serviceconnectors in tenancy",
+                    "allow group grp-auditors to use ons-family in tenancy where any {request.operation!=/Create*/, request.operation!=/Update*/, request.operation!=/Delete*/, request.operation!=/Change*/}"
+
+                ]
+            },
+            "PCY-SECURITY-ADMINISTRATION": {
+                "name": "pcy-security-administration",
+                "description": "Policy which allows grp-security-admins group users to manage all security resources in the security compartment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-security-admins to use cloud-shell in tenancy",
+                    "allow group grp-security-admins to read usage-budgets in tenancy",
+                    "allow group grp-security-admins to read usage-reports in tenancy",
+                    "allow group grp-security-admins to read objectstorage-namespaces in tenancy",
+                    "allow group grp-security-admins to manage cloudevents-rules in tenancy",
+                    "allow group grp-security-admins to manage cloud-guard-family in tenancy",
+                    "allow group grp-security-admins to read tenancies in tenancy",
+                    "allow group grp-security-admins to read objectstorage-namespaces in tenancy"
+                ]
+            },
+            "PCY-LZP-IAM-ADMINISTRATION": {
+                "name": "pcy-lz01-iam-administration",
+                "description": "Policy to allow grp-lz01-iam-admins group users to manage IAM resoures in the Landing Zone Production environment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-iam-admins to manage policies in compartment cmp-landingzone-01",
+                    "allow group grp-iam-admins to manage compartments in compartment cmp-landingzone-01"
+                ]
+            },
+            "PCY-LZP-NETWORK-ADMINISTRATION": {
+                "name": "pcy-lz01-network-administration",
+                "description": "Policy which allows grp-lz01-network-admins group users to manage all network resources in the compartment cmp-landingzone-01:cmp-lz01-network.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-network-admins to use cloud-shell in tenancy",
+                    "allow group grp-lz01-network-admins to read usage-budgets in tenancy",
+                    "allow group grp-lz01-network-admins to read usage-reports in tenancy",
+                    "allow group grp-lz01-network-admins to read objectstorage-namespaces in tenancy",
+                    "allow group grp-lz01-network-admins to read all-resources in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage virtual-network-family in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage dns in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage load-balancers in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage alarms in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage metrics in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to read ons-topics in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-network-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to read audit-events in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to read work-requests in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage instance-family in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage volume-family in compartment cmp-landingzone-01:cmp-lz01-network where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-network-admins to manage object-family in compartment cmp-landingzone-01:cmp-lz01-network where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-network-admins to manage file-family in compartment cmp-landingzone-01:cmp-lz01-network where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-network-admins to manage bastion-session in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage cloudevents-rules in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to read instance-agent-plugins in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage keys in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to use key-delegate in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage secret-family in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to manage repos in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to read vss-family in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-network-admins to use bastion in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-network-admins to use bastion-session in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-network-admins to use vaults in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-network-admins to read logging-family in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use subnets in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use vnics in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use subnets in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use vnics in compartment cmp-landingzone-01:cmp-lz01-network"
+                ]
+            },
+            "PCY-LZP-SECURITY-ADMINISTRATION": {
+                "name": "pcy-lz01-security-administration",
+                "description": "Policy which allows grp-security-admins group users to manage all security resources in the Landing Zone Production Environment, shared Security compartment. (compartment cmp-landingzone-01:cmp-lz01-cmp-lz01-security)",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-security-admins to manage tag-namespaces in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage tag-defaults in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage repos in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to read audit-events in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to read app-catalog-listing in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to read instance-images in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to inspect buckets in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to read all-resources in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage instance-family in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage volume-family in compartment cmp-landingzone-01:cmp-lz01-security where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-security-admins to manage object-family in compartment cmp-landingzone-01:cmp-lz01-security where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-security-admins to manage file-family in compartment cmp-landingzone-01:cmp-lz01-security where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-security-admins to manage vaults in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage keys in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage secret-family in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage logging-family in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage serviceconnectors in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage streams in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage ons-family in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage functions-family in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage waas-family in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage security-zone in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage vss-family in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to read work-requests in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage bastion-family in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to read instance-agent-plugins in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage cloudevents-rules in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage alarms in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to manage metrics in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to use key-delegate in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-security-admins to read virtual-network-family in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-security-admins to use subnets in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-security-admins to use network-security-groups in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-security-admins to use vnics in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-security-admins to manage private-ips in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-security-admins to read keys in compartment cmp-landingzone-01:cmp-lz01-network",
+                    "allow group grp-lz01-security-admins to manage operator-control-family in compartment cmp-landingzone-01:cmp-lz01-security"
+                ]
+            },
+            "PCY-LZP-PROD-IAM-ADMINISTRATION": {
+                "name": "pcy-lz01-prod-iam-administration",
+                "description": "Policy to allow grp-lz01-prod-iam-admins group users to manage IAM resoures in the Landing Zone Production environment, Prod Environment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-prod-iam-admins to manage policies in compartment cmp-landingzone-01:cmp-lz01-prd",
+                    "allow group grp-lz01-prod-iam-admins to manage compartments in compartment cmp-landingzone-01:cmp-lz01-prd"
+                ]
+            },
+             "PCY-LZP-DEV-IAM-ADMINISTRATION": {
+                "name": "pcy-lz01-dev-iam-administration",
+                "description": "Policy to allow grp-lz01-dev-iam-admins group users to manage IAM resoures in the Landing Zone Production environment, Development Environment. cmp-landingzone-01:cmp-dev-test)",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-dev-iam-admins to manage policies in compartment cmp-landingzone-01:cmp-lz01-dev",
+                    "allow group grp-lz01-dev-iam-admins to manage compartments in compartment cmp-landingzone-01:cmp-lz01-dev"
+                ]
+            },
+			"PCY-LZP-TEST-IAM-ADMINISTRATION": {
+                "name": "pcy-lz01-test-iam-administration",
+                "description": "Policy to allow grp-lz01-test-iam-admins group users to manage IAM resoures in the Landing Zone Production environment, Test Environment. (cmp-landingzone-01:cmp-lz01-tst)",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-test-iam-admins to manage policies in compartment cmp-landingzone-01:cmp-lz01-tst",
+                    "allow group grp-lz01-test-iam-admins to manage compartments in compartment cmp-landingzone-01:cmp-lz01-tst"
+                ]
+            },
+			"PCY-LZP-ACC-IAM-ADMINISTRATION": {
+                "name": "pcy-lz01-acc-iam-administration",
+                "description": "Policy to allow grp-lz01-acc-iam-admins group users to manage IAM resoures in the Landing Zone Production environment, Acceptance Environment. (cmp-landingzone-01:cmp-lz01-acc)",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-acc-iam-admins to manage policies in compartment cmp-landingzone-01:cmp-lz01-acc",
+                    "allow group grp-lz01-acc-iam-admins to manage compartments in compartment cmp-landingzone-01:cmp-lz01-acc"
+                ]
+            },
+            "PCY-LZP-PROD-NETWORK-ADMINISTRATION": {
+                "name": "pcy-lz01-prod-network-administration",
+                "description": "Policy which allows grp-lz01-prod-network-admins group users to manage all network resources in the Landing Zone Production Environment, Shared network compartment of Production Environment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-prod-network-admins to use cloud-shell in tenancy",
+                    "allow group grp-lz01-prod-network-admins to read usage-budgets in tenancy",
+                    "allow group grp-lz01-prod-network-admins to read usage-reports in tenancy",
+                    "allow group grp-lz01-prod-network-admins to read objectstorage-namespaces in tenancy",
+                    "allow group grp-lz01-prod-network-admins to read all-resources in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to manage virtual-network-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to manage dns in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to manage alarms in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to manage metrics in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to read ons-topics in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-network-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to read audit-events in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to read work-requests in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to manage instance-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to manage volume-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-prod-network-admins to manage object-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-prod-network-admins to manage file-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-prod-network-admins to manage cloudevents-rules in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to read instance-agent-plugins in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to manage keys in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to use key-delegate in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to manage secret-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to manage repos in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to read vss-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-network-admins to use bastion in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-network-admins to use bastion-session in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-network-admins to use vaults in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-network-admins to read logging-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use subnets in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use vnics in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-network"
+                ]
+            },
+            "PCY-LZP-DEV-NETWORK-ADMINISTRATION": {
+                "name": "pcy-lz01-dev-network-administration",
+                "description": "Policy which allows grp-lz01-dev-network-admins group users to manage all network resources in the Landing Zone Development Environment, Shared network compartment of Development Environment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-dev-network-admins to use cloud-shell in tenancy",
+                    "allow group grp-lz01-dev-network-admins to read usage-budgets in tenancy",
+                    "allow group grp-lz01-dev-network-admins to read usage-reports in tenancy",
+                    "allow group grp-lz01-dev-network-admins to read objectstorage-namespaces in tenancy",
+                    "allow group grp-lz01-dev-network-admins to read all-resources in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to manage virtual-network-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to manage dns in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to manage alarms in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to manage metrics in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to read ons-topics in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-network-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to read audit-events in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to read work-requests in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to manage instance-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to manage volume-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-dev-network-admins to manage object-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-dev-network-admins to manage file-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-dev-network-admins to manage cloudevents-rules in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to read instance-agent-plugins in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to manage keys in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to use key-delegate in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to manage secret-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to manage repos in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to read vss-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-network-admins to use bastion in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-network-admins to use bastion-session in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-network-admins to use vaults in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-network-admins to read logging-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use subnets in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use vnics in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-network"
+                ]
+            },
+            "PCY-LZP-TEST-NETWORK-ADMINISTRATION": {
+                "name": "pcy-lz01-test-network-administration",
+                "description": "Policy which allows grp-lz01-test-network-admins group users to manage all network resources in the Landing Zone Test Environment, Shared network compartment of Test Environment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-test-network-admins to use cloud-shell in tenancy",
+                    "allow group grp-lz01-test-network-admins to read usage-budgets in tenancy",
+                    "allow group grp-lz01-test-network-admins to read usage-reports in tenancy",
+                    "allow group grp-lz01-test-network-admins to read objectstorage-namespaces in tenancy",
+                    "allow group grp-lz01-test-network-admins to read all-resources in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to manage virtual-network-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to manage dns in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to manage alarms in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to manage metrics in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to read ons-topics in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-network-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to read audit-events in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to read work-requests in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to manage instance-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to manage volume-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-test-network-admins to manage object-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-test-network-admins to manage file-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-test-network-admins to manage cloudevents-rules in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to read instance-agent-plugins in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to manage keys in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to use key-delegate in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to manage secret-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to manage repos in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to read vss-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-network-admins to use bastion in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-network-admins to use bastion-session in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-network-admins to use vaults in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-network-admins to read logging-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-infra-admins to use subnets in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-infra-admins to use vnics in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-network"
+                ]
+            },
+            "PCY-LZP-ACC-NETWORK-ADMINISTRATION": {
+                "name": "pcy-lz01-acc-network-administration",
+                "description": "Policy which allows grp-lz01-acc-network-admins group users to manage all network resources in the Landing Zone Production Environment, Shared network compartment of Acceptance Environment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-acc-network-admins to use cloud-shell in tenancy",
+                    "allow group grp-lz01-acc-network-admins to read usage-budgets in tenancy",
+                    "allow group grp-lz01-acc-network-admins to read usage-reports in tenancy",
+                    "allow group grp-lz01-acc-network-admins to read objectstorage-namespaces in tenancy",
+                    "allow group grp-lz01-acc-network-admins to read all-resources in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to manage virtual-network-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to manage dns in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to manage alarms in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to manage metrics in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to read ons-topics in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-network-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to read audit-events in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to read work-requests in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to manage instance-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to manage volume-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-acc-network-admins to manage object-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-acc-network-admins to manage file-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-acc-network-admins to manage cloudevents-rules in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to read instance-agent-plugins in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to manage keys in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to use key-delegate in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to manage secret-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to manage repos in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to read vss-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-network-admins to use bastion in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-network-admins to use bastion-session in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-network-admins to use vaults in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-network-admins to read logging-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-infra-admins to use subnets in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-infra-admins to use vnics in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-network"
+                ]
+            },
+            "PCY-LZP-PROD-SECURITY-ADMINISTRATION": {
+                "name": "pcy-lz01-prod-security-administration",
+                "description": "Policy which allows grp-lz01-prod-security-admins group users to manage all security resources in the Landing Zone Production Environment, Shared network compartment of Production Environment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-prod-security-admins to manage tag-namespaces in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage tag-defaults in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage repos in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to read audit-events in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to read app-catalog-listing in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to read instance-images in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to inspect buckets in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to read all-resources in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage instance-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage volume-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-prod-security-admins to manage object-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-prod-security-admins to manage file-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-prod-security-admins to manage vaults in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage keys in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage secret-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage logging-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage serviceconnectors in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage streams in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage ons-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage functions-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage waas-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage security-zone in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage vss-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to read work-requests in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage bastion-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to read instance-agent-plugins in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage cloudevents-rules in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage alarms in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage metrics in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to use key-delegate in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to read virtual-network-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to use subnets in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to use network-security-groups in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to use vnics in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage private-ips in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to read keys in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-security-admins to manage operator-control-family in compartment cmp-landingzone-01:cmp-lz01-prd:cmp-lz01-prd-security"
+                ]
+            },
+            "PCY-LZP-DEV-SECURITY-ADMINISTRATION": {
+                "name": "pcy-lz01-dev-security-administration",
+                "description": "Policy which allows grp-lz01-dev-security-admins group users to manage all security resources in the Landing Zone Development Environment, Shared network compartment of Development Environment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-dev-security-admins to manage tag-namespaces in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage tag-defaults in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage repos in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to read audit-events in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to read app-catalog-listing in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to read instance-images in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to inspect buckets in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to read all-resources in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage instance-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage volume-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-dev-security-admins to manage object-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-dev-security-admins to manage file-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-dev-security-admins to manage vaults in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage keys in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage secret-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage logging-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage serviceconnectors in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage streams in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage ons-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage functions-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage waas-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage security-zone in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage vss-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to read work-requests in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage bastion-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to read instance-agent-plugins in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage cloudevents-rules in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage alarms in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage metrics in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to use key-delegate in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to read virtual-network-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to use subnets in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to use network-security-groups in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to use vnics in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage private-ips in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to read keys in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-security-admins to manage operator-control-family in compartment cmp-landingzone-01:cmp-lz01-dev:cmp-lz01-dev-security"
+                ]
+            },		
+            "PCY-LZP-TEST-SECURITY-ADMINISTRATION": {
+                "name": "pcy-lz01-test-security-administration",
+                "description": "Policy which allows grp-lz01-test-security-admins group users to manage all security resources in the Landing Zone Test Environment, Shared network compartment of Test Environment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-test-security-admins to manage tag-namespaces in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage tag-defaults in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage repos in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to read audit-events in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to read app-catalog-listing in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to read instance-images in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to inspect buckets in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to read all-resources in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage instance-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage volume-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-test-security-admins to manage object-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-test-security-admins to manage file-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-test-security-admins to manage vaults in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage keys in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage secret-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage logging-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage serviceconnectors in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage streams in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage ons-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage functions-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage waas-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage security-zone in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage vss-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to read work-requests in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage bastion-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to read instance-agent-plugins in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage cloudevents-rules in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage alarms in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage metrics in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to use key-delegate in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to read virtual-network-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to use subnets in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to use network-security-groups in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to use vnics in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage private-ips in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to read keys in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-security-admins to manage operator-control-family in compartment cmp-landingzone-01:cmp-lz01-tst:cmp-lz01-tst-security"
+                ]
+            },
+            "PCY-LZP-ACC-SECURITY-ADMINISTRATION": {
+                "name": "pcy-lz01-acc-security-administration",
+                "description": "Policy which allows grp-lz01-acc-security-admins group users to manage all security resources in the Landing Zone Production Environment, Shared network compartment of Acceptance Environment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-acc-security-admins to manage tag-namespaces in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage tag-defaults in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage repos in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to read audit-events in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to read app-catalog-listing in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to read instance-images in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to inspect buckets in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to read all-resources in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage instance-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage volume-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-acc-security-admins to manage object-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-acc-security-admins to manage file-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-acc-security-admins to manage vaults in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage keys in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage secret-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage logging-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage serviceconnectors in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage streams in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage ons-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage functions-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage waas-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage security-zone in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage vss-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to read work-requests in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage bastion-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to read instance-agent-plugins in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage cloudevents-rules in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage alarms in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage metrics in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to use key-delegate in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to read virtual-network-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to use subnets in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to use network-security-groups in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to use vnics in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage private-ips in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to read keys in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-security-admins to manage operator-control-family in compartment cmp-landingzone-01:cmp-lz01-acc:cmp-lz01-acc-security"
+                ]
+            },
+            "PCY-LZP-PROD-PROJ1-APP-ADMINISTRATION": {
+                "name": "pcy-lz01-prod-proj1-app-administration",
+                "description": "Policy which allows grp-lz01-prod-proj1-app-admins groups to manage the resources in the Landing Zone Production Environment, Production environment, Project 1, application compartment.",
+                "compartment_id": "CMP-LZP-PROD-KEY",
+                "statements": [
+                    "allow group grp-lz01-prod-proj1-app-admins to read all-resources in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1",
+                    "allow group grp-lz01-prod-proj1-app-admins to use network-security-groups in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage api-gateway-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage streams in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage cluster-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage alarms in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage metrics in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage logging-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage instance-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage volume-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage object-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage file-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage repos in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage orm-stacks in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage orm-config-source-providers in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to read audit-events in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to read work-requests in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage bastion-session in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage cloudevents-rules in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to read instance-agent-plugins in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage keys in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to use key-delegate in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage secret-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to use subnets in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-app-admins to use virtual-network-family in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-app-admins to use vnics in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage private-ips in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-app-admins to use load-balancers in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-app",
+                    "allow group grp-lz01-prod-proj1-app-admins to read ons-topics in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-app-admins to use vaults in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-app-admins to manage instance-images in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-app-admins to use vss-family in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-app-admins to use bastion in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-app-admins to read logging-family in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-app-admins to read autonomous-database-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-app-admins to read database-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db"
+                ]
+            },
+            "PCY-LZP-DEV-PROJ1-APP-ADMINISTRATION": {
+                "name": "pcy-lz01-dev-proj1-app-administration",
+                "description": "Policy which allows grp-lz01-dev-proj1-app-admins groups to manage the resources in the Landing Zone Development Environment, Development environment, Project 1, application compartment.",
+                "compartment_id": "CMP-LZP-DEV-KEY",
+                "statements": [
+                    "allow group grp-lz01-dev-proj1-app-admins to read all-resources in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1",
+                    "allow group grp-lz01-dev-proj1-app-admins to use network-security-groups in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage api-gateway-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage streams in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage cluster-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage alarms in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage metrics in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage logging-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage instance-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage volume-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage object-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage file-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage repos in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage orm-stacks in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage orm-config-source-providers in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to read audit-events in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to read work-requests in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage bastion-session in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage cloudevents-rules in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to read instance-agent-plugins in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage keys in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to use key-delegate in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage secret-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to use subnets in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-app-admins to use virtual-network-family in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-app-admins to use vnics in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage private-ips in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-app-admins to use load-balancers in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-app",
+                    "allow group grp-lz01-dev-proj1-app-admins to read ons-topics in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-app-admins to use vaults in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-app-admins to manage instance-images in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-app-admins to use vss-family in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-app-admins to use bastion in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-app-admins to read logging-family in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-app-admins to read autonomous-database-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-app-admins to read database-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db"
+                ]
+            },			
+            "PCY-LZP-TEST-PROJ1-APP-ADMINISTRATION": {
+                "name": "pcy-lz01-test-proj1-app-administration",
+                "description": "Policy which allows grp-lz01-test-proj1-app-admins groups to manage the resources in the Landing Zone Test Environment, Test environment, Project 1, application compartment.",
+                "compartment_id": "CMP-LZP-TEST-KEY",
+                "statements": [
+                    "allow group grp-lz01-test-proj1-app-admins to read all-resources in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1",
+                    "allow group grp-lz01-test-proj1-app-admins to use network-security-groups in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage api-gateway-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage streams in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage cluster-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage alarms in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage metrics in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage logging-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage instance-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage volume-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-test-proj1-app-admins to manage object-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-test-proj1-app-admins to manage file-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-test-proj1-app-admins to manage repos in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage orm-stacks in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage orm-config-source-providers in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to read audit-events in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to read work-requests in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage bastion-session in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage cloudevents-rules in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to read instance-agent-plugins in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage keys in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to use key-delegate in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to manage secret-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to use subnets in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-app-admins to use virtual-network-family in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-app-admins to use vnics in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-app-admins to manage private-ips in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-app-admins to use load-balancers in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-app",
+                    "allow group grp-lz01-test-proj1-app-admins to read ons-topics in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-app-admins to use vaults in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-app-admins to manage instance-images in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-app-admins to use vss-family in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-app-admins to use bastion in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-app-admins to read logging-family in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-app-admins to read autonomous-database-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-app-admins to read database-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db"
+                ]
+            },		
+            "PCY-LZP-ACC-PROJ1-APP-ADMINISTRATION": {
+                "name": "pcy-lz01-acc-proj1-app-administration",
+                "description": "Policy which allows grp-lz01-acc-proj1-app-admins groups to manage the resources in the Landing Zone Production Environment, Acceptance environment, Project 1, application compartment.",
+                "compartment_id": "CMP-LZP-ACC-KEY",
+                "statements": [
+                    "allow group grp-lz01-acc-proj1-app-admins to read all-resources in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1",
+                    "allow group grp-lz01-acc-proj1-app-admins to use network-security-groups in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage api-gateway-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage streams in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage cluster-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage alarms in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage metrics in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage logging-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage instance-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage volume-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage object-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage file-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage repos in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage orm-stacks in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage orm-config-source-providers in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to read audit-events in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to read work-requests in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage bastion-session in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage cloudevents-rules in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to read instance-agent-plugins in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage keys in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to use key-delegate in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage secret-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to use subnets in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-app-admins to use virtual-network-family in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-app-admins to use vnics in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage private-ips in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-app-admins to use load-balancers in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-app",
+                    "allow group grp-lz01-acc-proj1-app-admins to read ons-topics in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-app-admins to use vaults in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-app-admins to manage instance-images in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-app-admins to use vss-family in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-app-admins to use bastion in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-app-admins to read logging-family in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-app-admins to read autonomous-database-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-app-admins to read database-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db"
+                ]
+            },									
+            "PCY-LZP-PROD-PROJ1-DB-ADMINISTRATION": {
+                "name": "pcy-lz01-prod-proj1-db-administration",
+                "description": "Policy which allows grp-lz01-prod-proj1-db-admins groups to manage the resources in the Landing Zone Production Environment, Production environment, Project 1, database compartment.",
+                "compartment_id": "CMP-LZP-PROD-KEY",
+                "statements": [
+                    "allow group grp-lz01-prod-proj1-db-admins to read all-resources in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1",
+                    "allow group grp-lz01-prod-proj1-db-admins to use network-security-groups in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage database-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage autonomous-database-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage alarms in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage metrics in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage cloudevents-rules in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage logging-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage instance-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage volume-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage object-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage file-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage orm-stacks in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage orm-jobs in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage orm-config-source-providers in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to read audit-events in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to read work-requests in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage bastion-session in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage data-safe-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to read instance-agent-plugins in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to use vnics in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage keys in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to use key-delegate in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage secret-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage repos in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-db-admins to use subnets in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-db-admins to read virtual-network-family in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-db-admins to use vnics in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage private-ips in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-db-admins to read ons-topics in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-db-admins to use vaults in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-db-admins to use vss-family in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-db-admins to use bastion in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-db-admins to manage bastion-session in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-db-admins to read logging-family in compartment cmp-lz01-prd-security"
+                ]
+            },
+            "PCY-LZP-DEV-PROJ1-DB-ADMINISTRATION": {
+                "name": "pcy-lz01-dev-proj1-db-administration",
+                "description": "Policy which allows grp-lz01-dev-proj1-db-admins groups to manage the resources in the Landing Zone Development Environment, Development environment, Project 1, database compartment.",
+                "compartment_id": "CMP-LZP-DEV-KEY",
+                "statements": [
+                    "allow group grp-lz01-dev-proj1-db-admins to read all-resources in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1",
+                    "allow group grp-lz01-dev-proj1-db-admins to use network-security-groups in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage database-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage autonomous-database-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage alarms in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage metrics in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage cloudevents-rules in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage logging-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage instance-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage volume-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage object-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage file-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage orm-stacks in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage orm-jobs in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage orm-config-source-providers in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to read audit-events in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to read work-requests in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage bastion-session in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage data-safe-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to read instance-agent-plugins in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to use vnics in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage keys in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to use key-delegate in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage secret-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage repos in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-db-admins to use subnets in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-db-admins to read virtual-network-family in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-db-admins to use vnics in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage private-ips in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-db-admins to read ons-topics in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-db-admins to use vaults in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-db-admins to use vss-family in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-db-admins to use bastion in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-db-admins to manage bastion-session in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-db-admins to read logging-family in compartment cmp-lz01-dev-security"
+                ]
+            },
+            "PCY-LZP-TEST-PROJ1-DB-ADMINISTRATION": {
+                "name": "pcy-lz01-test-proj1-db-administration",
+                "description": "Policy which allows grp-lz01-test-proj1-db-admins groups to manage the resources in the Landing Zone Test Environment, Test environment, Project 1, database compartment.",
+                "compartment_id": "CMP-LZP-TEST-KEY",
+                "statements": [
+                    "allow group grp-lz01-test-proj1-db-admins to read all-resources in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1",
+                    "allow group grp-lz01-test-proj1-db-admins to use network-security-groups in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage database-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage autonomous-database-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage alarms in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage metrics in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage cloudevents-rules in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage logging-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage instance-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage volume-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-test-proj1-db-admins to manage object-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-test-proj1-db-admins to manage file-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-test-proj1-db-admins to manage orm-stacks in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage orm-jobs in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage orm-config-source-providers in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to read audit-events in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to read work-requests in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage bastion-session in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage data-safe-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to read instance-agent-plugins in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to use vnics in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage keys in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to use key-delegate in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage secret-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to manage repos in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-db-admins to use subnets in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-db-admins to read virtual-network-family in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-db-admins to use vnics in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-db-admins to manage private-ips in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-db-admins to read ons-topics in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-db-admins to use vaults in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-db-admins to use vss-family in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-db-admins to use bastion in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-db-admins to manage bastion-session in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-db-admins to read logging-family in compartment cmp-lz01-tst-security"
+                ]
+            },
+            "PCY-LZP-ACC-PROJ1-DB-ADMINISTRATION": {
+                "name": "pcy-lz01-acc-proj1-db-administration",
+                "description": "Policy which allows grp-lz01-acc-proj1-db-admins groups to manage the resources in the Landing Zone Production Environment, Acceptance environment, Project 1, database compartment.",
+                "compartment_id": "CMP-LZP-ACC-KEY",
+                "statements": [
+                    "allow group grp-lz01-acc-proj1-db-admins to read all-resources in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1",
+                    "allow group grp-lz01-acc-proj1-db-admins to use network-security-groups in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage database-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage autonomous-database-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage alarms in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage metrics in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage cloudevents-rules in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage logging-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage instance-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage volume-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db where all{request.permission != 'VOLUME_BACKUP_DELETE', request.permission != 'VOLUME_DELETE', request.permission != 'BOOT_VOLUME_BACKUP_DELETE'}",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage object-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db where all{request.permission != 'OBJECT_DELETE', request.permission != 'BUCKET_DELETE'}",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage file-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db where all{request.permission != 'FILE_SYSTEM_DELETE', request.permission != 'MOUNT_TARGET_DELETE', request.permission != 'EXPORT_SET_DELETE', request.permission != 'FILE_SYSTEM_DELETE_SNAPSHOT', request.permission != 'FILE_SYSTEM_NFSv3_UNEXPORT'}",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage orm-stacks in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage orm-jobs in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage orm-config-source-providers in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to read audit-events in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to read work-requests in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage bastion-session in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage data-safe-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to read instance-agent-plugins in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to use vnics in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage keys in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to use key-delegate in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage secret-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage repos in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-db-admins to use subnets in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-db-admins to read virtual-network-family in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-db-admins to use vnics in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage private-ips in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-db-admins to read ons-topics in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-db-admins to use vaults in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-db-admins to use vss-family in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-db-admins to use bastion in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-db-admins to manage bastion-session in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-db-admins to read logging-family in compartment cmp-lz01-acc-security"
+                ]
+            },
+            "PCY-LZP-PROD-PROJ1-INFRA-ADMINISTRATION": {
+                "name": "pcy-lz01-prod-proj1-infra-administration",
+                "description": "Policy which allows grp-lz01-prod-proj1-infra-admins groups to manage the resources in the Landing Zone Production Environment, Production environment, Project 1 compartments.",
+                "compartment_id": "CMP-LZP-PROD-KEY",
+                "statements": [
+                    "allow group grp-lz01-prod-proj1-infra-admins to read all-resources in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1",
+                    "allow group grp-lz01-prod-proj1-infra-admins to read bucket in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1",
+                    "allow group grp-lz01-prod-proj1-infra-admins to inspect object in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage object-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage volume-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage file-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use network-security-groups in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage cluster-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage alarms in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage metrics in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage logging-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage instance-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage repos in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage orm-stacks in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage orm-config-source-providers in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to read audit-events in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to read work-requests in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage bastion-session in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage cloudevents-rules in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to read instance-agent-plugins in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage keys in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use key-delegate in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage secret-family in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-infra",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use subnets in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use virtual-network-family in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use vnics in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage private-ips in compartment cmp-lz01-prd-network",
+                    "allow group grp-lz01-prod-proj1-infra-admins to read ons-topics in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use vaults in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage instance-images in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use vss-family in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-infra-admins to use bastion in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-infra-admins to read logging-family in compartment cmp-lz01-prd-security",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage cloud-vmclusters in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db where all{request.permission !='CLOUD_VM_CLUSTER_UPDATE_GI_SOFTWARE', request.permission !='CLOUD_VM_CLUSTER_UPDATE_EXADATA_STORAGE'}",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage dbnode-console-connection in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db",
+                    "allow group grp-lz01-prod-proj1-infra-admins to manage cloud-autonomous-vmclusters in compartment cmp-lz01-prd-projects:cmp-lz01-prd-proj1:cmp-lz01-prd-proj1-db"
+                ]
+            },
+             "PCY-LZP-DEV-PROJ1-INFRA-ADMINISTRATION": {
+                "name": "pcy-lz01-dev-proj1-infra-administration",
+                "description": "Policy which allows grp-lz01-dev-proj1-infra-admins groups to manage the resources in the Landing Zone Development Environment, Development environment, Project 1 compartments.",
+                "compartment_id": "CMP-LZP-DEV-KEY",
+                "statements": [
+                    "allow group grp-lz01-dev-proj1-infra-admins to read all-resources in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1",
+                    "allow group grp-lz01-dev-proj1-infra-admins to read bucket in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1",
+                    "allow group grp-lz01-dev-proj1-infra-admins to inspect object in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage object-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage volume-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage file-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use network-security-groups in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage cluster-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage alarms in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage metrics in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage logging-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage instance-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage repos in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage orm-stacks in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage orm-config-source-providers in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to read audit-events in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to read work-requests in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage bastion-session in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage cloudevents-rules in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to read instance-agent-plugins in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage keys in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use key-delegate in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage secret-family in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-infra",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use subnets in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use virtual-network-family in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use vnics in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage private-ips in compartment cmp-lz01-dev-network",
+                    "allow group grp-lz01-dev-proj1-infra-admins to read ons-topics in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use vaults in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage instance-images in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use vss-family in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-infra-admins to use bastion in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-infra-admins to read logging-family in compartment cmp-lz01-dev-security",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage cloud-vmclusters in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db where all{request.permission !='CLOUD_VM_CLUSTER_UPDATE_GI_SOFTWARE', request.permission !='CLOUD_VM_CLUSTER_UPDATE_EXADATA_STORAGE'}",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage dbnode-console-connection in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db",
+                    "allow group grp-lz01-dev-proj1-infra-admins to manage cloud-autonomous-vmclusters in compartment cmp-lz01-dev-projects:cmp-lz01-dev-proj1:cmp-lz01-dev-proj1-db"
+                ]
+            },
+            "PCY-LZP-TEST-PROJ1-INFRA-ADMINISTRATION": {
+                "name": "pcy-lz01-test-proj1-infra-administration",
+                "description": "Policy which allows grp-lz01-test-proj1-infra-admins groups to manage the resources in the Landing Zone Test Environment, Test environment, Project 1 compartments.",
+                "compartment_id": "CMP-LZP-TEST-KEY",
+                "statements": [
+                    "allow group grp-lz01-test-proj1-infra-admins to read all-resources in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1",
+                    "allow group grp-lz01-test-proj1-infra-admins to read bucket in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1",
+                    "allow group grp-lz01-test-proj1-infra-admins to inspect object in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage object-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage volume-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage file-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1",
+                    "allow group grp-lz01-test-proj1-infra-admins to use network-security-groups in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage cluster-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage alarms in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage metrics in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage logging-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage instance-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage repos in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage orm-stacks in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage orm-config-source-providers in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to read audit-events in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to read work-requests in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage bastion-session in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage cloudevents-rules in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to read instance-agent-plugins in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage keys in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to use key-delegate in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage secret-family in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-infra",
+                    "allow group grp-lz01-test-proj1-infra-admins to use subnets in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-infra-admins to use virtual-network-family in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-infra-admins to use vnics in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage private-ips in compartment cmp-lz01-tst-network",
+                    "allow group grp-lz01-test-proj1-infra-admins to read ons-topics in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-infra-admins to use vaults in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage instance-images in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-infra-admins to use vss-family in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-infra-admins to use bastion in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-infra-admins to read logging-family in compartment cmp-lz01-tst-security",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage cloud-vmclusters in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db where all{request.permission !='CLOUD_VM_CLUSTER_UPDATE_GI_SOFTWARE', request.permission !='CLOUD_VM_CLUSTER_UPDATE_EXADATA_STORAGE'}",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage dbnode-console-connection in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db",
+                    "allow group grp-lz01-test-proj1-infra-admins to manage cloud-autonomous-vmclusters in compartment cmp-lz01-tst-projects:cmp-lz01-tst-proj1:cmp-lz01-tst-proj1-db"
+                ]
+            },
+            "PCY-LZP-ACC-PROJ1-INFRA-ADMINISTRATION": {
+                "name": "pcy-lz01-acc-proj1-infra-administration",
+                "description": "Policy which allows grp-lz01-acc-proj1-infra-admins groups to manage the resources in the Landing Zone Production Environment, Acceptance environment, Project 1 compartments.",
+                "compartment_id": "CMP-LZP-ACC-KEY",
+                "statements": [
+                    "allow group grp-lz01-acc-proj1-infra-admins to read all-resources in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1",
+                    "allow group grp-lz01-acc-proj1-infra-admins to read bucket in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1",
+                    "allow group grp-lz01-acc-proj1-infra-admins to inspect object in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage object-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage volume-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage file-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1",
+                    "allow group grp-lz01-acc-proj1-infra-admins to use network-security-groups in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage cluster-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage alarms in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage metrics in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage logging-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage instance-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage repos in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage orm-stacks in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage orm-config-source-providers in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to read audit-events in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to read work-requests in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage bastion-session in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage cloudevents-rules in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to read instance-agent-plugins in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage keys in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to use key-delegate in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage secret-family in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-infra",
+                    "allow group grp-lz01-acc-proj1-infra-admins to use subnets in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-infra-admins to use virtual-network-family in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-infra-admins to use vnics in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage private-ips in compartment cmp-lz01-acc-network",
+                    "allow group grp-lz01-acc-proj1-infra-admins to read ons-topics in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-infra-admins to use vaults in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage instance-images in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-infra-admins to use vss-family in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-infra-admins to use bastion in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-infra-admins to read logging-family in compartment cmp-lz01-acc-security",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage cloud-vmclusters in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db where all{request.permission !='CLOUD_VM_CLUSTER_UPDATE_GI_SOFTWARE', request.permission !='CLOUD_VM_CLUSTER_UPDATE_EXADATA_STORAGE'}",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage dbnode-console-connection in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db",
+                    "allow group grp-lz01-acc-proj1-infra-admins to manage cloud-autonomous-vmclusters in compartment cmp-lz01-acc-projects:cmp-lz01-acc-proj1:cmp-lz01-acc-proj1-db"
+                ]
+            },
+            "PCY-LZP-PLATFORM-EXACS-ADMINISTRATION": {
+                "name": "pcy-lz01-platform-exadbd-administration",
+                "description": "Policy which allows the groups grp-lz01-infra-admins and grp-lz01-db-admins to manage ExaCS resources in the Landing Zone Production Environment, shared ExaCS Platform compartment.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-infra-admins,grp-lz01-db-admins to use cloud-shell in tenancy",
+                    "allow group grp-lz01-infra-admins,grp-lz01-db-admins to read all-resources in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd",
+                    "allow group grp-lz01-infra-admins to use cloud-exadata-infrastructures in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-infra-admins to manage scheduling-policies in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-infra-admins to manage scheduling-windows in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-infra-admins to manage execution-windows in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-db-admins to use cloud-exadata-infrastructures in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra where all{request.operation !='ChangeCloudExadataInfrastructureCompartment',request.operation !='AddStorageCapacityCloudExadataInfrastructure'}",
+                    "allow group grp-lz01-infra-admins to manage cloud-vmclusters in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra where all{request.permission !='CLOUD_VM_CLUSTER_UPDATE_GI_SOFTWARE', request.permission !='CLOUD_VM_CLUSTER_UPDATE_EXADATA_STORAGE'}",
+                    "allow group grp-lz01-infra-admins to use dbServers in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-infra-admins to manage dbnode-console-connection in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-db-admins to use cloud-vmclusters in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra where all{request.permission !='CLOUD_VM_CLUSTER_UPDATE_SSH_KEY', request.permission !='CLOUD_VM_CLUSTER_UPDATE_CPU',request.permission !='CLOUD_VM_CLUSTER_UPDATE_MEMORY',request.permission !='CLOUD_VM_CLUSTER_UPDATE_LOCAL_STORAGE',request.permission !='CLOUD_VM_CLUSTER_UPDATE_FILE_SYSTEM'}",
+                    "allow group grp-lz01-infra-admins,grp-lz01-db-admins to manage alarms in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd",
+                    "allow group grp-lz01-infra-admins,grp-lz01-db-admins to manage metrics in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd",
+                    "allow group grp-lz01-infra-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-db-admins to manage orm-stacks in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-db",
+                    "allow group grp-lz01-infra-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-db-admins to manage orm-jobs in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-db",
+                    "allow group grp-lz01-infra-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-db-admins to manage orm-config-source-providers in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-db",
+                    "allow group grp-lz01-infra-admins,grp-lz01-db-admins to read audit-events in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd",
+                    "allow group grp-lz01-infra-admins,grp-lz01-db-admins to read work-requests in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd",
+                    "allow group grp-lz01-infra-admins,grp-lz01-db-admins to manage cloudevents-rules in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd",
+                    "allow group grp-lz01-infra-admins,grp-lz01-db-admins to manage db-nodes in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-db-admins to manage backups in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-db-admins to manage database-software-image in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-db",
+                    "allow group grp-lz01-db-admins to manage db-homes in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-db-admins to manage databases in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-db-admins to manage pluggable-databases in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-db-admins to manage autonomous-databases in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-db",
+                    "allow group grp-lz01-db-admins to manage autonomous-backups in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-db",
+                    "allow group grp-lz01-infra-admins,grp-lz01-db-admins to manage cloud-autonomous-vmclusters in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-db-admins to manage autonomous-container-databases in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-db",
+                    "allow group grp-lz01-security-admins to use ons-family in compartment cmp-landingzone-01:cmp-lz01-security",
+                    "allow group grp-lz01-prod-proj1-db-admins,grp-lz01-prod-proj1-infra-admins to use cloud-exadata-infrastructures in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra",
+                    "allow group grp-lz01-prod-proj1-db-admins,grp-lz01-prod-proj1-infra-admins to use dbServers in compartment cmp-landingzone-01:cmp-lz01-platform:cmp-lz01-platform-exadbd:cmp-lz01-platform-exadbd-infra"
+
+                ]
+            },
+            "PCY-LZP-DB-ADMINISTRATION": {
+                "name": "pcy-lz01-db-administration",
+                "description": "Example policy which allows the grp-lz01-db-admins group users to manage databases in all the environments and projects of the OE01.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-db-admins to use cloud-shell in tenancy",
+                    "allow group grp-lz01-db-admins to read all-resources in compartment cmp-landingzone-01",
+                    "allow group grp-lz01-db-admins to use ons-family in compartment cmp-landingzone-01",
+                    "allow group grp-lz01-db-admins to manage alarms in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage metrics in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage orm-stacks in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage orm-jobs in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage orm-config-source-providers in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to read audit-events in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to read work-requests in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage data-safe-family in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage cloudevents-rules in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to use cloud-exadata-infrastructures in compartment cmp-landingzone-01 where all{target.compartment.name = /*-platform-exadbd-infra/,request.operation !='ChangeCloudExadataInfrastructureCompartment',request.operation !='AddStorageCapacityCloudExadataInfrastructure'}",
+                    "allow group grp-lz01-db-admins to use cloud-vmclusters in compartment cmp-landingzone-01 where all{request.permission !='CLOUD_VM_CLUSTER_UPDATE_SSH_KEY', request.permission !='CLOUD_VM_CLUSTER_UPDATE_CPU',request.permission !='CLOUD_VM_CLUSTER_UPDATE_MEMORY',request.permission !='CLOUD_VM_CLUSTER_UPDATE_LOCAL_STORAGE',request.permission !='CLOUD_VM_CLUSTER_UPDATE_FILE_SYSTEM'}",
+                    "allow group grp-lz01-db-admins to manage cloud-autonomous-vmclusters in compartment cmp-landingzone-01",
+                    "allow group grp-lz01-db-admins to manage backup-destinations in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage backups in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage database-software-image in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage db-homes in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage databases in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage pluggable-databases in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage autonomous-databases in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage autonomous-backups in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage cloud-autonomous-vmclusters in compartment cmp-landingzone-01 where target.compartment.name = /*-db/",
+                    "allow group grp-lz01-db-admins to manage autonomous-container-databases in compartment cmp-landingzone-01 where target.compartment.name = /*-db/"
+                ]
+            },
+            "PCY-LZP-INFRA-ADMINISTRATION": {
+                "name": "pcy-lz01-infra-administration",
+                "description": "Example policy which allows the grp-lz01-infra-admins group users to manage the DB infra in all the environments and projects.",
+                "compartment_id": "TENANCY-ROOT",
+                "statements": [
+                    "allow group grp-lz01-infra-admins to use cloud-shell in tenancy",
+                    "allow group grp-lz01-infra-admins to read all-resources in compartment cmp-landingzone-01",
+                    "allow group grp-lz01-infra-admins to manage ons-family in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to manage alarms in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to manage metrics in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to manage orm-stacks in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to manage orm-jobs in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to manage orm-config-source-providers in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to read audit-events in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to read work-requests in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to manage cloudevents-rules in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to manage cloud-vmclusters in compartment cmp-landingzone-01 where all{request.permission !='CLOUD_VM_CLUSTER_UPDATE_GI_SOFTWARE', request.permission !='CLOUD_VM_CLUSTER_UPDATE_EXADATA_STORAGE'}",
+                    "allow group grp-lz01-infra-admins to use dbServers in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to manage dbnode-console-connection in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to manage dbnode-console-history in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to manage cloud-autonomous-vmclusters in compartment cmp-landingzone-01 where target.compartment.name != /*-db/",
+                    "allow group grp-lz01-infra-admins to use subnets in compartment cmp-landingzone-01 where target.compartment.name = /*-network/",
+                    "allow group grp-lz01-infra-admins to use vnics in compartment cmp-landingzone-01 where target.compartment.name = /*-network/"
+                ]
+            }
+        }
+    }
+}
