@@ -19,11 +19,11 @@
                         "description": "Shared Platform Compartment",
                         "children": {
                             "CMP-LZP-PLATFORM-EXACS-KEY": {
-                                "name": "cmp-lz01-platform-exacs",
+                                "name": "cmp-lz01-platform-exadbd",
                                 "description": "ExaCS Shared Platform",
                                 "children": {
                                     "CMP-LZP-PLATFORM-EXACS-DB-KEY": {
-                                        "name": "cmp-lz01-platform-exacs-db",
+                                        "name": "cmp-lz01-platform-exadbd-db",
                                         "description": "ExaCS Shared Platform, DB Layer"
                                     },
                                     "CMP-LZP-PLATFORM-EXACS-INFRA-KEY": {
